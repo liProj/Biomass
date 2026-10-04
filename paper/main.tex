@@ -1,0 +1,35 @@
+\documentclass[10pt]{article}
+\usepackage[a4paper,margin=2.1cm]{geometry}
+\usepackage{fontspec}
+\usepackage{amsmath,amssymb,booktabs,graphicx,hyperref,xcolor,caption,float,multirow,adjustbox,array}
+\usepackage[section]{placeins}
+\usepackage[numbers,sort&compress]{natbib}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black}
+\captionsetup{font=small,labelfont=bf}
+\setlength{\emergencystretch}{3em}
+\renewcommand{\arraystretch}{1.1}
+\renewcommand{\topfraction}{0.92}\renewcommand{\bottomfraction}{0.85}\renewcommand{\textfraction}{0.08}\renewcommand{\floatpagefraction}{0.75}
+\setcounter{topnumber}{4}\setcounter{totalnumber}{6}
+\graphicspath{{../figures/}}
+\input{numbers.tex}
+\newcommand{\inctab}[1]{\input{tables/#1.tex}}
+\newcommand{\incfig}[2][\linewidth]{\includegraphics[width=#1,height=0.62\textheight,keepaspectratio]{#2.pdf}}
+% One short paragraph after each result that states what it contributes to the main line of the paper.
+\newcommand{\storylink}[1]{\par\smallskip\noindent\textcolor{blue!45!black}{\textbf{Role in the argument.}}\ #1\par\medskip}
+\title{From Reproduction to Generalisation: Pseudo-Processive Kinetics with a Fingerprint-Informed Prior (PPK-FIP) for the Lipase-Catalysed Esterification of Trimethylolpropane}
+\author{Draft manuscript; author names and affiliations to be supplied}
+\date{2 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}\input{abstract.tex}\end{abstract}
+\noindent\textbf{Keywords:} Ping Pong bi bi; lipase; trimethylolpropane; biolubricant; kinetic model; selectivity; pseudo-processivity; enzyme deactivation; Bayesian prior; cross-validation; reproducibility; hybrid modelling
+\input{sec_intro.tex}
+\input{sec_methods.tex}
+\input{sec_results.tex}
+\input{sec_discussion.tex}
+\input{sec_conclusions.tex}
+\section*{Data and Code Availability}
+All data are those published in the Supplementary Material of \cite{nishimura2026}. The code that parses them, reproduces the original analysis, implements PPK-FIP and generates every number, table and figure of this paper is provided with the manuscript (directory \texttt{code/}).
+\bibliographystyle{unsrtnat}
+\bibliography{refs}
+\end{document}

@@ -1,0 +1,45 @@
+# Python environments and generated caches
+__pycache__/
+*.py[cod]
+*.nbc
+*.nbi
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+secrets*.json
+# Local logs and incomplete experiment output
+logs/
+*.log
+*.partial.csv
+results/cv/cache*/
+# Downloaded literature and supplemental archives
+pdfs/
+texts/
+supp/
+# Manuscript history and rendering checks
+paper/v1_before_rewrite/
+paper/v2_before_polish_20261002/
+paper/revision_20261002/
+*.aux
+*.blg
+*.bbl
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+# Local editing artifacts
+.publish-backup/
+.node_repl*
+.DS_Store
+Thumbs.db
+~$*

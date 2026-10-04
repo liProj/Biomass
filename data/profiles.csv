@@ -1,0 +1,199 @@
+dataset,table,t,tcum,c,Z,M,D,T,source
+Akerman70,S1,0.0,0.0,0.0,100.0,0.0,0.0,0.0,"Akerman et al. 70 C (oleic acid, CALB, 3:1)"
+Akerman70,S1,0.5,0.5,17.3806,82.6194,17.3806,0.0,0.0,"Akerman et al. 70 C (oleic acid, CALB, 3:1)"
+Akerman70,S1,1.0,1.0,23.2515,76.7485,23.2515,0.0,0.0,"Akerman et al. 70 C (oleic acid, CALB, 3:1)"
+Akerman70,S1,1.5,1.5,36.2348,65.7774,32.2103,2.0122,0.0,"Akerman et al. 70 C (oleic acid, CALB, 3:1)"
+Akerman70,S1,2.0,2.0,48.9835,55.0991,40.8184,4.0826,0.0,"Akerman et al. 70 C (oleic acid, CALB, 3:1)"
+Akerman70,S1,16.0,16.0,185.6777,2.746,16.2383,73.6076,7.4081,"Akerman et al. 70 C (oleic acid, CALB, 3:1)"
+Akerman70,S1,24.0,24.0,221.4186,0.0,0.0,78.5814,21.4186,"Akerman et al. 70 C (oleic acid, CALB, 3:1)"
+Akerman70,S1,42.0,42.0,258.0991,0.0,0.0,41.9009,58.0991,"Akerman et al. 70 C (oleic acid, CALB, 3:1)"
+Akerman70,S1,48.0,48.0,268.4474,0.0,0.0,31.5526,68.4474,"Akerman et al. 70 C (oleic acid, CALB, 3:1)"
+Akerman70,S1,64.0,64.0,291.4403,0.0,0.0,8.5597,91.4403,"Akerman et al. 70 C (oleic acid, CALB, 3:1)"
+Akerman100,S2,0.0,0.0,0.0,100.0,0.0,0.0,0.0,"Akerman et al. 100 C (oleic acid, CALB, 3:1)"
+Akerman100,S2,2.0,2.0,103.3522,20.5035,55.6408,23.8557,0.0,"Akerman et al. 100 C (oleic acid, CALB, 3:1)"
+Akerman100,S2,4.0,4.0,142.0923,8.1955,44.4805,44.3602,2.9638,"Akerman et al. 100 C (oleic acid, CALB, 3:1)"
+Akerman100,S2,6.0,6.0,179.4654,1.9599,23.419,67.8167,6.8044,"Akerman et al. 100 C (oleic acid, CALB, 3:1)"
+Akerman100,S2,9.0,9.0,214.7083,0.0,4.2473,76.7971,18.9556,"Akerman et al. 100 C (oleic acid, CALB, 3:1)"
+Akerman100,S2,12.0,12.0,230.7644,0.0,0.976,67.2835,31.7404,"Akerman et al. 100 C (oleic acid, CALB, 3:1)"
+Akerman100,S2,20.0,20.0,263.792,0.0,0.0,36.208,63.792,"Akerman et al. 100 C (oleic acid, CALB, 3:1)"
+Akerman100,S2,24.0,24.0,275.2981,0.0,0.0,24.7019,75.2981,"Akerman et al. 100 C (oleic acid, CALB, 3:1)"
+Bornadel,S3,0.0,0.0,0.0,100.0,0.0,0.0,0.0,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,0.3,0.3,5.481,94.5283,3.2861,1.0975,0.0,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,0.4,0.4,13.5191,90.1524,6.9389,3.2901,0.0,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,0.7,0.7,21.2283,84.6813,10.9561,5.1186,0.0116,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,1.0,1.0,27.8215,78.8456,14.6092,6.5827,0.0156,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,1.2,1.2,35.8772,73.375,19.7235,8.0474,0.0196,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,1.4,1.4,43.9264,68.6336,23.0122,9.876,0.3874,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,1.7,1.7,51.9772,63.893,27.032,11.339,0.7558,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,2.0,2.0,59.2973,58.4214,30.3192,12.8019,1.1247,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,3.0,3.0,87.4792,39.4581,39.8234,20.4802,2.2318,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,4.0,4.0,117.1316,24.1449,40.2037,33.9987,2.9768,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,5.0,5.0,146.4155,13.94,35.8386,48.6121,4.4509,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,6.0,6.0,171.3167,6.656,27.093,62.1304,6.6543,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,7.0,7.0,191.1121,3.0206,16.8882,73.8232,8.8592,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,8.0,8.0,203.9788,0.4803,8.1446,79.6783,12.1592,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,9.0,9.0,218.2958,0.0,5.6034,79.3273,18.0126,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,10.0,10.0,225.3156,0.0,2.6982,76.0568,23.5013,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,11.0,11.0,229.055,0.0,2.3486,70.9623,28.2606,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,12.0,12.0,238.265,0.0,1.6334,65.502,35.2092,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,13.0,13.0,240.5397,0.0,0.9171,58.2166,41.0631,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,14.0,14.0,250.6454,0.0,0.0,52.7568,48.3772,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,15.0,15.0,252.9213,0.0,0.0,45.1096,54.234,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,16.0,16.0,259.1928,0.0,0.0,40.014,59.7216,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,17.0,17.0,265.836,0.0,0.0,34.5542,65.5758,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,18.0,18.0,275.0369,0.0,0.0,27.6352,73.2555,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,19.0,19.0,279.8524,0.0,0.0,21.81,78.7442,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,20.0,20.0,284.6677,0.0,0.0,17.079,83.5032,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,21.0,21.0,286.1997,0.0,0.0,11.2543,87.897,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,22.0,22.0,288.1004,0.0,0.0,7.255,91.1968,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,23.0,23.0,295.4716,0.0,0.0,5.4444,94.8609,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Bornadel,S3,24.0,24.0,297.3668,0.0,0.0,4.7284,95.97,"Bornadel et al. exp 1 (oleic acid, CALB, 3:1)"
+Tao025,S4,0.0,0.0,0.0,100.0,0.0,0.0,0.0,"Tao et al. aw=0.25 (caprylic acid, Candida sp. 99-125, 3.2:1)"
+Tao025,S4,3.0,3.0,24.5316,79.9378,16.1105,3.4339,0.5178,"Tao et al. aw=0.25 (caprylic acid, Candida sp. 99-125, 3.2:1)"
+Tao025,S4,6.0,6.0,43.198,66.3192,25.9408,5.9628,1.7772,"Tao et al. aw=0.25 (caprylic acid, Candida sp. 99-125, 3.2:1)"
+Tao025,S4,9.0,9.0,60.0356,55.743,31.6974,9.3405,3.2191,"Tao et al. aw=0.25 (caprylic acid, Candida sp. 99-125, 3.2:1)"
+Tao025,S4,21.0,21.0,111.8578,27.1768,40.7969,25.0179,7.0084,"Tao et al. aw=0.25 (caprylic acid, Candida sp. 99-125, 3.2:1)"
+Tao025,S4,24.0,24.0,124.8264,22.5974,38.9505,29.4806,8.9716,"Tao et al. aw=0.25 (caprylic acid, Candida sp. 99-125, 3.2:1)"
+Tao025,S4,27.0,27.0,137.7462,18.2125,37.3459,32.9244,11.5171,"Tao et al. aw=0.25 (caprylic acid, Candida sp. 99-125, 3.2:1)"
+Tao025,S4,30.0,30.0,154.9749,12.9547,33.772,38.6171,14.6562,"Tao et al. aw=0.25 (caprylic acid, Candida sp. 99-125, 3.2:1)"
+Tao025,S4,33.0,33.0,171.4474,8.2107,30.003,43.9145,17.8718,"Tao et al. aw=0.25 (caprylic acid, Candida sp. 99-125, 3.2:1)"
+Tao025,S4,45.0,45.0,221.6768,1.4483,14.3673,45.2436,38.9408,"Tao et al. aw=0.25 (caprylic acid, Candida sp. 99-125, 3.2:1)"
+Tao025,S4,48.0,48.0,230.2253,1.1146,11.4871,43.4568,43.9415,"Tao et al. aw=0.25 (caprylic acid, Candida sp. 99-125, 3.2:1)"
+Tao025,S4,51.0,51.0,245.2005,0.3727,6.7228,40.2357,52.6688,"Tao et al. aw=0.25 (caprylic acid, Candida sp. 99-125, 3.2:1)"
+Tao025,S4,54.0,54.0,256.4707,0.0,4.0712,35.3869,60.5419,"Tao et al. aw=0.25 (caprylic acid, Candida sp. 99-125, 3.2:1)"
+Tao025,S4,57.0,57.0,263.9495,0.7449,2.6871,28.4415,68.1264,"Tao et al. aw=0.25 (caprylic acid, Candida sp. 99-125, 3.2:1)"
+Tao025,S4,70.0,70.0,286.7193,0.7416,0.5732,9.9096,88.7757,"Tao et al. aw=0.25 (caprylic acid, Candida sp. 99-125, 3.2:1)"
+Tao025,S4,72.0,72.0,287.2035,0.3739,0.1927,11.2896,88.1439,"Tao et al. aw=0.25 (caprylic acid, Candida sp. 99-125, 3.2:1)"
+Tao025,S4,75.0,75.0,288.1612,0.748,0.5782,8.4382,90.2355,"Tao et al. aw=0.25 (caprylic acid, Candida sp. 99-125, 3.2:1)"
+Tao035,S5,0.0,0.0,0.0,100.0,0.0,0.0,0.0,Tao et al. aw=0.35
+Tao035,S5,3.0,3.0,18.6587,84.2507,13.3518,1.8858,0.5118,Tao et al. aw=0.35
+Tao035,S5,6.0,6.0,32.8315,73.5222,21.1463,4.3093,1.0223,Tao et al. aw=0.35
+Tao035,S5,9.0,9.0,43.31,65.0579,27.7089,6.0985,1.1347,Tao et al. aw=0.35
+Tao035,S5,21.0,21.0,90.039,36.1404,41.5966,18.3466,3.9164,Tao et al. aw=0.35
+Tao035,S5,24.0,24.0,100.0839,31.3293,42.1105,21.7071,4.853,Tao et al. aw=0.35
+Tao035,S5,27.0,27.0,115.111,24.5075,42.3851,26.5964,6.5111,Tao et al. aw=0.35
+Tao035,S5,30.0,30.0,126.4819,19.7275,41.9835,30.3686,7.9204,Tao et al. aw=0.35
+Tao035,S5,33.0,33.0,137.8962,15.765,40.473,33.8627,9.8993,Tao et al. aw=0.35
+Tao035,S5,45.0,45.0,182.8666,4.9729,27.829,46.5567,20.6414,Tao et al. aw=0.35
+Tao035,S5,48.0,48.0,191.0462,3.5038,25.6228,47.1967,23.6767,Tao et al. aw=0.35
+Tao035,S5,51.0,51.0,201.5473,3.1067,20.4459,48.2407,28.2067,Tao et al. aw=0.35
+Tao035,S5,54.0,54.0,210.2414,2.7864,16.5407,48.318,32.3549,Tao et al. aw=0.35
+Tao035,S5,57.0,57.0,218.3097,2.0289,13.8088,47.986,36.1763,Tao et al. aw=0.35
+Tao035,S5,69.0,69.0,250.0135,2.4271,3.4309,35.8433,58.2987,Tao et al. aw=0.35
+Tao035,S5,72.0,72.0,256.3963,2.0823,2.703,31.9508,63.2639,Tao et al. aw=0.35
+Tao035,S5,76.0,76.0,269.8753,0.7108,0.5521,26.888,71.849,Tao et al. aw=0.35
+Tao035,S5,78.0,78.0,272.6762,0.7136,0.3679,24.4471,74.4713,Tao et al. aw=0.35
+Tao035,S5,79.0,79.0,277.9202,0.0079,0.0,22.0562,77.9359,Tao et al. aw=0.35
+Tao045,S6,0.0,0.0,0.0,100.0,0.0,0.0,0.0,Tao et al. aw=0.45
+Tao045,S6,3.0,3.0,23.1744,80.6679,15.8799,3.0621,0.3902,Tao et al. aw=0.45
+Tao045,S6,6.0,6.0,39.7777,69.0318,23.7839,5.5591,1.6252,Tao et al. aw=0.45
+Tao045,S6,9.0,9.0,53.8909,58.632,31.1581,7.897,2.3129,Tao et al. aw=0.45
+Tao045,S6,21.0,21.0,93.1421,34.492,41.8901,19.6017,4.0162,Tao et al. aw=0.45
+Tao045,S6,24.0,24.0,104.911,28.8954,42.6946,23.0138,5.3963,Tao et al. aw=0.45
+Tao045,S6,27.0,27.0,114.7972,25.2541,41.8664,25.7077,7.1718,Tao et al. aw=0.45
+Tao045,S6,30.0,30.0,127.0696,20.1121,41.2346,30.1249,8.5284,Tao et al. aw=0.45
+Tao045,S6,34.0,34.0,139.8303,16.1433,38.5205,34.6989,10.6373,Tao et al. aw=0.45
+Tao045,S6,46.0,46.0,179.406,7.843,26.5743,43.9164,21.6663,Tao et al. aw=0.45
+Tao045,S6,48.0,48.0,186.5065,6.6853,24.3349,44.7678,24.212,Tao et al. aw=0.45
+Tao045,S6,52.0,52.0,202.3411,4.125,19.2397,46.8046,29.8308,Tao et al. aw=0.45
+Tao045,S6,54.0,54.0,208.6217,3.4714,17.6476,45.6689,33.2121,Tao et al. aw=0.45
+Tao045,S6,57.0,57.0,216.2284,3.1894,14.6255,44.9525,37.2327,Tao et al. aw=0.45
+Tao045,S6,70.0,70.0,252.0175,2.3474,3.3114,34.3176,60.0236,Tao et al. aw=0.45
+Tao045,S6,72.0,72.0,254.6681,2.375,2.9899,32.2271,62.408,Tao et al. aw=0.45
+Tao045,S6,75.0,75.0,260.3324,1.7128,2.4823,29.5646,66.2403,Tao et al. aw=0.45
+Tao045,S6,78.0,78.0,265.5595,1.3679,2.1146,26.1078,70.4098,Tao et al. aw=0.45
+Tao045,S6,80.0,80.0,269.679,1.0403,1.5996,24.0008,73.3592,Tao et al. aw=0.45
+Mao1,S17,0.0,0.0,0.0,,0.0,0.0,0.0,"Mao et al. batch 1 (pelargonic acid, Candida sp. 99-125, 3:1)"
+Mao1,S17,3.0,3.0,21.9027,,17.9743,1.0196,0.381,"Mao et al. batch 1 (pelargonic acid, Candida sp. 99-125, 3:1)"
+Mao1,S17,6.0,6.0,42.4779,,28.2453,5.268,0.7619,"Mao et al. batch 1 (pelargonic acid, Candida sp. 99-125, 3:1)"
+Mao1,S17,12.0,12.0,81.6372,,38.5163,14.9544,1.9049,"Mao et al. batch 1 (pelargonic acid, Candida sp. 99-125, 3:1)"
+Mao1,S17,24.0,24.0,162.9425,,27.7318,39.0854,16.0007,"Mao et al. batch 1 (pelargonic acid, Candida sp. 99-125, 3:1)"
+Mao1,S17,27.0,27.0,183.8496,,20.2853,43.1639,25.398,"Mao et al. batch 1 (pelargonic acid, Candida sp. 99-125, 3:1)"
+Mao1,S17,30.0,30.0,197.4558,,16.1769,44.8633,31.4935,"Mao et al. batch 1 (pelargonic acid, Candida sp. 99-125, 3:1)"
+Mao1,S17,33.0,33.0,220.0221,,10.7846,45.543,41.9067,"Mao et al. batch 1 (pelargonic acid, Candida sp. 99-125, 3:1)"
+Mao1,S17,36.0,36.0,233.6283,,6.4194,37.3861,52.1929,"Mao et al. batch 1 (pelargonic acid, Candida sp. 99-125, 3:1)"
+Mao1,S17,48.0,48.0,262.5,,2.0542,18.5231,80.1307,"Mao et al. batch 1 (pelargonic acid, Candida sp. 99-125, 3:1)"
+Mao1,S17,54.0,54.0,276.1062,,1.5407,13.2551,85.8452,"Mao et al. batch 1 (pelargonic acid, Candida sp. 99-125, 3:1)"
+Mao1,S17,60.0,60.0,281.0841,,1.2839,10.706,88.0041,"Mao et al. batch 1 (pelargonic acid, Candida sp. 99-125, 3:1)"
+Mao1,S17,72.0,72.0,282.7434,,1.5407,9.8563,88.0041,"Mao et al. batch 1 (pelargonic acid, Candida sp. 99-125, 3:1)"
+Mao1,S17,76.0,76.0,283.7389,,1.7974,9.0066,88.639,"Mao et al. batch 1 (pelargonic acid, Candida sp. 99-125, 3:1)"
+Mao1,S17,84.0,84.0,284.0708,,0.7703,8.157,89.6549,"Mao et al. batch 1 (pelargonic acid, Candida sp. 99-125, 3:1)"
+Mao1,S17,96.0,96.0,288.0531,,0.0,6.1177,92.3217,"Mao et al. batch 1 (pelargonic acid, Candida sp. 99-125, 3:1)"
+Mao2,S18,0.0,96.0,0.0,,0.0,0.0,0.0,Mao et al. batch 2
+Mao2,S18,4.0,100.0,31.4985,,22.0335,3.7631,1.2889,Mao et al. batch 2
+Mao2,S18,8.0,104.0,48.6239,,31.9841,9.0941,1.406,Mao et al. batch 2
+Mao2,S18,12.0,108.0,72.4771,,37.907,16.3067,2.5777,Mao et al. batch 2
+Mao2,S18,24.0,120.0,125.0765,,36.7224,36.3765,7.4989,Mao et al. batch 2
+Mao2,S18,28.0,124.0,143.7309,,33.4056,42.4916,10.7796,Mao et al. batch 2
+Mao2,S18,32.0,128.0,158.104,,28.9041,49.2338,16.8725,Mao et al. batch 2
+Mao2,S18,36.0,132.0,180.7339,,22.5073,52.9968,23.1996,Mao et al. batch 2
+Mao2,S18,48.0,144.0,226.6055,,7.8183,48.9202,47.2194,Mao et al. batch 2
+Mao2,S18,52.0,148.0,241.896,,4.5015,42.8051,57.5304,Mao et al. batch 2
+Mao2,S18,56.0,152.0,253.5168,,3.3169,36.0629,65.2636,Mao et al. batch 2
+Mao2,S18,60.0,156.0,262.3853,,2.843,30.1047,71.1221,Mao et al. batch 2
+Mao2,S18,72.0,168.0,281.6514,,1.6584,14.582,87.643,Mao et al. batch 2
+Mao2,S18,76.0,172.0,288.3792,,1.4215,11.2893,91.5096,Mao et al. batch 2
+Mao2,S18,80.0,176.0,290.8257,,1.1846,9.2509,93.6187,Mao et al. batch 2
+Mao2,S18,84.0,180.0,291.4373,,1.4215,7.683,94.7904,Mao et al. batch 2
+Mao2,S18,96.0,192.0,293.8838,,0.7108,6.5854,95.2591,Mao et al. batch 2
+Mao3,S19,0.0,192.0,0.0,,0.0,0.0,0.0,Mao et al. batch 3
+Mao3,S19,3.0,195.0,26.7081,,15.8891,1.5933,1.3097,Mao et al. batch 3
+Mao3,S19,6.0,198.0,39.441,,22.8707,2.8679,1.7859,Mao et al. batch 3
+Mao3,S19,12.0,204.0,62.1118,,33.2227,8.6037,2.5003,Mao et al. batch 3
+Mao3,S19,24.0,216.0,111.8012,,42.371,25.6517,5.715,Mao et al. batch 3
+Mao3,S19,28.0,220.0,127.0186,,39.7228,28.2009,7.6199,Mao et al. batch 3
+Mao3,S19,32.0,224.0,140.6832,,35.6302,33.2994,9.7631,Mao et al. batch 3
+Mao3,S19,36.0,228.0,158.0745,,33.4635,42.381,14.5255,Mao et al. batch 3
+Mao3,S19,48.0,240.0,204.6584,,16.8521,50.188,31.3132,Mao et al. batch 3
+Mao3,S19,51.0,243.0,215.2174,,13.4817,49.5507,36.1948,Mao et al. batch 3
+Mao3,S19,56.0,248.0,233.5404,,8.4261,47.0015,46.1959,Mao et al. batch 3
+Mao3,S19,60.0,252.0,243.1677,,6.2594,42.5403,52.6253,Mao et al. batch 3
+Mao3,S19,72.0,264.0,273.6025,,2.1667,23.8991,77.3901,Mao et al. batch 3
+Mao3,S19,78.0,270.0,279.5031,,1.2037,14.0208,86.6769,Mao et al. batch 3
+Mao3,S19,81.0,273.0,282.6087,,0.963,14.6581,86.3197,Mao et al. batch 3
+Mao3,S19,85.0,277.0,288.1988,,0.7222,11.6309,90.2488,Mao et al. batch 3
+Mao3,S19,96.0,288.0,291.9255,,0.963,7.4884,93.5825,Mao et al. batch 3
+Mao4,S20,0.0,288.0,0.0,,0.0,0.0,0.0,Mao et al. batch 4 (excluded by authors)
+Mao4,S20,3.0,291.0,14.2137,,12.6198,1.2373,0.6935,Mao et al. batch 4 (excluded by authors)
+Mao4,S20,6.0,294.0,31.1492,,18.696,2.32,1.6181,Mao et al. batch 4 (excluded by authors)
+Mao4,S20,12.0,300.0,40.8266,,25.2397,6.3413,1.9648,Mao et al. batch 4 (excluded by authors)
+Mao4,S20,24.0,312.0,78.3266,,40.6639,30.1598,5.0854,Mao et al. batch 4 (excluded by authors)
+Mao4,S20,28.0,316.0,84.6774,,50.4793,33.7171,5.7789,Mao et al. batch 4 (excluded by authors)
+Mao4,S20,32.0,320.0,92.8427,,51.8815,37.1197,7.397,Mao et al. batch 4 (excluded by authors)
+Mao4,S20,36.0,324.0,136.0887,,41.8324,42.069,10.1709,Mao et al. batch 4 (excluded by authors)
+Mao4,S20,48.0,336.0,164.5161,,29.2126,52.4316,25.7739,Mao et al. batch 4 (excluded by authors)
+Mao4,S20,51.0,339.0,175.7056,,24.3049,53.6689,28.779,Mao et al. batch 4 (excluded by authors)
+Mao4,S20,58.0,346.0,187.8024,,15.6579,56.1436,31.5528,Mao et al. batch 4 (excluded by authors)
+Mao4,S20,72.0,360.0,241.3306,,4.9077,48.8743,52.5881,Mao et al. batch 4 (excluded by authors)
+Mao4,S20,78.0,366.0,254.3347,,3.9729,36.5011,57.9047,Mao et al. batch 4 (excluded by authors)
+Mao4,S20,81.0,369.0,259.1734,,3.5055,29.0771,65.764,Mao et al. batch 4 (excluded by authors)
+Mao4,S20,85.0,373.0,261.2903,,2.5707,23.6638,70.6183,Mao et al. batch 4 (excluded by authors)
+Mao4,S20,96.0,384.0,271.2702,,2.337,16.8585,87.0304,Mao et al. batch 4 (excluded by authors)
+Mao4,S20,100.0,388.0,277.3185,,2.1033,13.9199,87.955,Mao et al. batch 4 (excluded by authors)
+Mao4,S20,104.0,392.0,281.25,,2.1033,12.5279,88.8796,Mao et al. batch 4 (excluded by authors)
+Mao4,S20,108.0,396.0,286.3911,,2.1033,10.8266,91.1912,Mao et al. batch 4 (excluded by authors)
+Mao4,S20,120.0,408.0,294.5565,,0.7011,7.7333,96.3922,Mao et al. batch 4 (excluded by authors)
+Mao5,S21,0.0,408.0,0.0,,0.0,0.0,0.0,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,3.0,411.0,10.6816,,8.0297,0.4689,0.2336,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,6.0,414.0,23.8047,,16.0594,1.4067,0.8176,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,12.0,420.0,33.8759,,23.1445,7.1897,1.168,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,24.0,432.0,77.2126,,40.1486,19.8499,3.0368,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,28.0,436.0,82.4008,,43.9273,22.8196,3.3872,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,32.0,440.0,91.2513,,55.0272,25.633,4.088,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,36.0,444.0,103.1536,,51.4847,30.3219,4.9055,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,48.0,456.0,125.1272,,38.4954,40.3251,8.0591,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,51.0,459.0,131.5361,,33.0636,47.6711,9.2271,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,58.0,466.0,148.0163,,30.7019,52.2038,10.3951,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,72.0,480.0,176.3988,,23.853,55.9549,20.2062,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,78.0,486.0,180.6714,,21.2552,57.6742,24.2941,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,81.0,489.0,187.6907,,17.9488,58.2994,26.5133,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,85.0,493.0,193.4893,,14.6424,59.2372,28.8493,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,96.0,504.0,214.5473,,11.5723,58.4557,35.1564,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,100.0,508.0,220.9563,,10.1552,54.5482,39.1275,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,104.0,512.0,226.1445,,9.6829,53.1416,42.2811,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,108.0,516.0,233.7742,,6.6127,52.2038,48.2378,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,120.0,528.0,249.0336,,3.0702,47.2022,56.8809,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,132.0,540.0,262.767,,2.1255,36.5739,68.9112,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,136.0,544.0,266.1241,,2.1255,33.2916,71.7144,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,140.0,548.0,271.9227,,2.1255,29.5405,74.0503,Mao et al. batch 5 (excluded by authors)
+Mao5,S21,144.0,552.0,274.9746,,1.8893,27.8212,76.8535,Mao et al. batch 5 (excluded by authors)

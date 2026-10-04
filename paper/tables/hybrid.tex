@@ -1,0 +1,28 @@
+\begin{table}[t]
+\centering
+\caption{Mechanistic mean plus Gaussian-process discrepancy (RMSE, molar \%). The GP is fitted to the training residuals of each species and reverts to zero away from the data.}\label{tab:hybrid}
+\footnotesize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{llrrrr}
+\toprule
+Protocol & Case & ORIG & ORIG+GP & PPK-FIP & PPK-FIP+GP \\
+\midrule
+LOTO & Åkerman 70\,°C & 1.828 & 1.778 & 1.886 & 1.839 \\
+ & Åkerman 100\,°C & 3.742 & 3.546 & 3.505 & 3.486 \\
+ & Bornadel & 1.825 & 0.693 & 1.054 & 0.725 \\
+ & Tao $a_w$=0.25 & 2.101 & 1.162 & 1.358 & 1.123 \\
+ & Tao $a_w$=0.35+0.45 & 1.643 & 0.731 & 1.495 & 0.737 \\
+ & Mao batches 1--3 & 3.607 & 1.259 & 3.098 & 1.197 \\
+ & All cases (pooled) & 2.533 & 1.307 & 2.121 & 1.290 \\
+\midrule
+Extrapolation & Åkerman 70\,°C & 1.097 & 1.098 & 1.443 & 1.443 \\
+ & Åkerman 100\,°C & 10.670 & 10.781 & 5.506 & 5.506 \\
+ & Bornadel & 4.044 & 4.030 & 3.971 & 3.956 \\
+ & Tao $a_w$=0.25 & 19.861 & 19.731 & 17.525 & 17.475 \\
+ & Tao $a_w$=0.35+0.45 & 15.866 & 15.861 & 15.753 & 15.751 \\
+ & Mao batches 1--3 & 4.654 & 4.308 & 7.765 & 7.733 \\
+ & All cases (pooled) & 12.080 & 12.018 & 11.874 & 11.857 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

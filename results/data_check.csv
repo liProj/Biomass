@@ -1,0 +1,43 @@
+item,paper,public_data,match,note
+"Table 1 Akerman70 full: printed BIC recomputed with public nT=36 (Fobj=59.0, k=5)",35.7,35.7,YES,9 sampling times x 4 species; BIC is only reproduced if nT is exact
+"Table 1 Akerman100 full: printed BIC recomputed with public nT=28 (Fobj=117.9, k=5)",56.9,56.9,YES,7 sampling times x 4 species; BIC is only reproduced if nT is exact
+"Table 2 Akerman70 simplified: printed BIC recomputed with public nT=36 (Fobj=70.9, k=3)",35.1,35.1,YES,9 sampling times x 4 species; BIC is only reproduced if nT is exact
+"Table 2 Akerman100 simplified: printed BIC recomputed with public nT=28 (Fobj=118.0, k=3)",50.3,50.3,YES,7 sampling times x 4 species; BIC is only reproduced if nT is exact
+"Table 3 Bornadel full: printed BIC recomputed with public nT=120 (Fobj=329.9, k=5)",145.3,145.3,YES,30 sampling times x 4 species; BIC is only reproduced if nT is exact
+"Table 3 Bornadel simplified: printed BIC recomputed with public nT=120 (Fobj=329.9, k=4)",140.5,140.5,YES,30 sampling times x 4 species; BIC is only reproduced if nT is exact
+"Table 4 Tao025 full: printed BIC recomputed with public nT=64 (Fobj=121.2, k=5)",61.7,61.7,YES,16 sampling times x 4 species; BIC is only reproduced if nT is exact
+"Table 4 Tao035+045 full: printed BIC recomputed with public nT=144 (Fobj=325.8, k=5)",142.4,142.4,YES,18+18 sampling times x 4 species; BIC is only reproduced if nT is exact
+"Table 5 Tao025 simplified: printed BIC recomputed with public nT=64 (Fobj=123.5, k=3)",54.5,54.5,YES,16 sampling times x 4 species; BIC is only reproduced if nT is exact
+"Table 5 Tao035+045 simplified: printed BIC recomputed with public nT=144 (Fobj=326.7, k=3)",132.9,132.9,YES,18+18 sampling times x 4 species; BIC is only reproduced if nT is exact
+"Table 6 Mao1-3 full: printed BIC recomputed with public nT=141 (Fobj=1475.9, k=7)",365.7,365.7,YES,15+16+16 sampling times x 3 species; BIC is only reproduced if nT is exact
+"Table 6 Mao1-3 simplified: printed BIC recomputed with public nT=141 (Fobj=1771.5, k=5)",381.6,381.6,YES,15+16+16 sampling times x 3 species; BIC is only reproduced if nT is exact
+Number of literature sources / case studies,4,4,YES,"Akerman, Bornadel, Tao, Mao"
+Akerman datasets (70 and 100 C),2,2,YES,
+Tao datasets (aw 0.25/0.35/0.45),3,3,YES,
+Mao batches tabulated / used,5 / 3,5 / 3,YES,batches 4-5 excluded by authors (Fig S4)
+"Akerman70: rows / duplicated time stamps / missing (c,M,D,T) / missing Z",-,10 / 0 / 0 / 0,YES,
+Akerman70: max |Z+M+D+T-100| and max |M+2D+3T-c|,0 (definition),0.0001 / 0.0001,YES,mass balance of TMP and definition of c (Eq. 15)
+"Akerman100: rows / duplicated time stamps / missing (c,M,D,T) / missing Z",-,8 / 0 / 0 / 0,YES,
+Akerman100: max |Z+M+D+T-100| and max |M+2D+3T-c|,0 (definition),0.0001 / 0.0002,YES,mass balance of TMP and definition of c (Eq. 15)
+"Bornadel: rows / duplicated time stamps / missing (c,M,D,T) / missing Z",-,31 / 0 / 0 / 0,YES,
+Bornadel: max |Z+M+D+T-100| and max |M+2D+3T-c|,0 (definition),3.0198 / 0.0002,INFO,mass balance of TMP and definition of c (Eq. 15); Z was digitised independently in the Bornadel source (Mitchell et al. 2022) - these are the exact values the paper fitted (fingerprint SS 840.6 reproduced)
+"Tao025: rows / duplicated time stamps / missing (c,M,D,T) / missing Z",-,17 / 0 / 0 / 0,YES,
+Tao025: max |Z+M+D+T-100| and max |M+2D+3T-c|,0 (definition),0.0001 / 0.0002,YES,mass balance of TMP and definition of c (Eq. 15)
+"Tao035: rows / duplicated time stamps / missing (c,M,D,T) / missing Z",-,19 / 0 / 0 / 0,YES,
+Tao035: max |Z+M+D+T-100| and max |M+2D+3T-c|,0 (definition),0.0001 / 0.0003,YES,mass balance of TMP and definition of c (Eq. 15)
+"Tao045: rows / duplicated time stamps / missing (c,M,D,T) / missing Z",-,19 / 0 / 0 / 0,YES,
+Tao045: max |Z+M+D+T-100| and max |M+2D+3T-c|,0 (definition),0.0001 / 0.0003,YES,mass balance of TMP and definition of c (Eq. 15)
+"Mao1: rows / duplicated time stamps / missing (c,M,D,T) / missing Z",-,16 / 0 / 0 / 16,YES,Z not reported by Mao et al. (paper: 'did not allow calculation of Z')
+"Mao1: |M+2D+3T-c| (c from 3x acid conversion, independent measurement)",not required,"median 2.7, max 17.0",INFO,"c derived from %conv A, species from mass %; differ because Z unknown and digitising noise"
+"Mao2: rows / duplicated time stamps / missing (c,M,D,T) / missing Z",-,17 / 0 / 0 / 17,YES,Z not reported by Mao et al. (paper: 'did not allow calculation of Z')
+"Mao2: |M+2D+3T-c| (c from 3x acid conversion, independent measurement)",not required,"median 9.7, max 20.8",INFO,"c derived from %conv A, species from mass %; differ because Z unknown and digitising noise"
+"Mao3: rows / duplicated time stamps / missing (c,M,D,T) / missing Z",-,17 / 0 / 0 / 17,YES,Z not reported by Mao et al. (paper: 'did not allow calculation of Z')
+"Mao3: |M+2D+3T-c| (c from 3x acid conversion, independent measurement)",not required,"median 6.0, max 9.8",INFO,"c derived from %conv A, species from mass %; differ because Z unknown and digitising noise"
+"Mao4: rows / duplicated time stamps / missing (c,M,D,T) / missing Z",-,20 / 0 / 0 / 20,YES,Z not reported by Mao et al. (paper: 'did not allow calculation of Z')
+"Mao4: |M+2D+3T-c| (c from 3x acid conversion, independent measurement)",not required,"median 14.5, max 55.5",INFO,"c derived from %conv A, species from mass %; differ because Z unknown and digitising noise"
+"Mao5: rows / duplicated time stamps / missing (c,M,D,T) / missing Z",-,24 / 0 / 0 / 24,YES,Z not reported by Mao et al. (paper: 'did not allow calculation of Z')
+"Mao5: |M+2D+3T-c| (c from 3x acid conversion, independent measurement)",not required,"median 18.2, max 28.8",INFO,"c derived from %conv A, species from mass %; differ because Z unknown and digitising noise"
+Fingerprinting fit Akerman: sum of squares reproduced on public data,74.2,74.2,YES,nT=64 (requires every row and value to match)
+Fingerprinting fit Bornadel: sum of squares reproduced on public data,840.6,840.6,YES,nT=120 (requires every row and value to match)
+Fingerprinting fit Tao: sum of squares reproduced on public data,535.3,535.3,YES,nT=208 (requires every row and value to match)
+Fingerprinting fit Mao: sum of squares reproduced on public data,1616.0,1616.0,YES,nT=141 (requires every row and value to match)

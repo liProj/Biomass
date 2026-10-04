@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{前半段训练的向前外推 RMSE（摩尔\%）。训练窗口为 $t\le0.5t_\mathrm{max}$，参数仅使用训练观测重新估计。比值与 $p$ 的定义同表~\ref{tab:loto}。}\label{tab:fcst}
+\footnotesize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+案例 & ORIG & ORIG-full & ORIG-BIC & JOINT-BMA & PPK-FIP & 比值$_\mathrm{O}$ & $p_\mathrm{O}$ & 比值$_\mathrm{F}$ & $p_\mathrm{F}$ \\
+\midrule
+Åkerman 70\,°C & \textbf{1.097} & 9.527 & \textbf{1.097} & 1.733 & 1.443 & 1.315 & 1.000 & 0.152 & 0.003 \\
+Åkerman 100\,°C & 10.670 & \textbf{0.673} & 10.670 & 5.773 & 5.506 & 0.516 & 1.000 & 8.180 & 0.594 \\
+Bornadel & 4.044 & 4.044 & 4.044 & 4.415 & \textbf{3.971} & 0.982 & 1.000 & 0.982 & 1.000 \\
+Tao $a_w$=0.25 & 19.861 & 19.861 & 19.861 & \textbf{17.167} & 17.525 & 0.882 & 1.000 & 0.882 & 1.000 \\
+Tao $a_w$=0.35+0.45 & 15.866 & 15.866 & 15.866 & 15.897 & \textbf{15.753} & 0.993 & 1.000 & 0.993 & 0.897 \\
+Mao 批次 1--3 & 4.654 & \textbf{4.159} & 4.654 & 5.660 & 7.765 & 1.669 & 1.000 & 1.867 & 0.013 \\
+\midrule
+全部案例（合并） & 12.080 & 12.060 & 12.080 & \textbf{11.582} & 11.874 & 0.983 & 0.184 & 0.985 & 0.740 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

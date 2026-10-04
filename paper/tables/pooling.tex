@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{Multi-task extension (LOTO RMSE, molar \%): profiles of the same system share the composition path (L1), additionally the lumped constants with hierarchical shrinkage ($\tau=\ln3$, L1h) or fully (L2). The level is chosen by leave-one-case-out meta-validation; the last row gives the pooled RMSE of the meta-selected levels (last column) versus L0.}\label{tab:pooling}
+\footnotesize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrrl}
+\toprule
+Case & ORIG & ORIG-full & L0 (PPK-FIP) & L1 path & L1h hier. & L2 path+$F$ & meta-choice \\
+\midrule
+Åkerman 70\,°C & 1.828 & 1.655 & 1.886 & 2.182 & 2.187 & 2.430 & L2 \\
+Åkerman 100\,°C & 3.742 & 3.293 & 3.505 & 3.325 & 3.002 & 2.203 & L0 \\
+Bornadel & 1.825 & 1.825 & 1.054 & -- & -- & -- & L0 \\
+Tao $a_w$=0.25 & 2.101 & 1.440 & 1.358 & 1.414 & 1.433 & 1.262 & L2 \\
+Tao $a_w$=0.35+0.45 & 1.643 & 1.591 & 1.495 & 1.332 & 1.350 & 1.301 & L2 \\
+Mao batches 1--3 & 3.607 & 3.314 & 3.098 & -- & -- & -- & L0 \\
+\midrule
+All cases (pooled) & 2.533 & 2.312 & 2.121 &  &  &  & 2.117 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

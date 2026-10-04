@@ -1,0 +1,88 @@
+\section{结果}
+\subsection{初始两步模型的拟合一致性与参数可辨识性}\label{sec:repro}
+公开数据的观测范围与 Nishimura 等报告的拟合统计量总体一致 \cite{nishimura2026}。表~\ref{tab:datacheck} 中六个案例的观测数分别为 36、28、120、64、144 和 141，将观测数与文献报告的 $F_\mathrm{obj}$、参数个数代入 BIC 公式后，12 个 BIC 均与报告精度一致。四个指纹拟合的残差平方和分别为 74.2、840.6、535.3 和 1616.0，全部 \NCheckPass{}/\NCheckAll{} 项核对通过。统计量一致为数据提取和实现提供了交叉检查，但统计量相同本身不能证明逐个观测值完全一致。
+\inctab{datacheck}
+
+指纹选择性估计与文献报告值接近（表~\ref{tab:reprofp}，图~\ref{fig:repro}a）。重新估计的 $S_M$ 与报告精度一致，$S_D$ 的差别主要出现在报告位数与舍入精度上；95\,\% 置信半宽的相对差异约为 2--12\,\%。置信区间差异可能与 Hessian 的数值近似有关。后续 PPK-FIP 使用相同指纹方程获得先验中心，并在每个交叉验证训练集上重新估计。
+\inctab{repro_fp}
+
+动态参数核对显示，12 个拟合中有 \ReproConsistent{} 个在文献参数处得到的目标值与报告值相差不超过 1.5\,\%（表~\ref{tab:reprodyn}）。Åkerman 与 Bornadel 案例的酶载量分别接近 2.0\,\% 和 5.0\,\%，Mao 案例接近 15.0\,\%（图~\ref{fig:repro}c）。Mao 全模型采用实际初始酸与 TMP 摩尔比 10:3.3（$A_0=303.0$）时，目标值为 \MaoFullAtPaper，与文献报告的 1475.9 接近。Tao 案例的四组文献参数以及 Mao 简化模型的文献参数未满足 1.5\,\% 的一致性阈值，说明公开参数与本文实现之间仍有未解释的差异。
+
+多起点重新估计进一步降低了部分初始全模型的目标值（图~\ref{fig:repro}b）。Åkerman 100\,°C 案例的 $F_\mathrm{obj}$ 从文献报告的 117.9 降至 \AkHundredFullGlobal；Tao 与 Mao 全模型也获得更低目标值。Tao 简化模型重新估计的目标值仍高于文献报告值，因此不能将全部差异归结为局部优化。后续比较采用本文在统一方程、初始条件与观测集合上重新估计的 ORIG 和 ORIG-full。
+\inctab{repro_dyn}
+\begin{figure}[!htbp]\centering\incfig{fig03_reproduction}\caption{初始两步模型的数值一致性与优化结果。（a）文献报告值与重新计算值的比较。（b）文献报告的目标值、文献参数处的目标值及多起点搜索最小值；F 和 S 分别表示完整与简化模型。（c）由 $k_E/k_A$ 估计的酶载量。文献报告值来自 Nishimura 等 \cite{nishimura2026}。}\label{fig:repro}\end{figure}
+
+初始全模型对优化起点敏感（图~\ref{fig:landscape}a）。200 个随机起点中，仅 \LandMinFrac--\LandMaxFrac\,\% 到达已找到的最低目标值，部分局部解的目标值高出数个数量级。图~\ref{fig:landscape}b 中三个案例的 $F_A$ 剖面在搜索范围内持续下降或趋于平坦，未形成封闭的最优区间。在大 $F_A$ 极限下，速率主要受 $k_E$ 与集总常数的比值控制。剖面结果表明，当前观测对完整参数集的实际辨识能力有限 \cite{raue2009,transtrum2015}；仅凭有限数据上的剖面曲线，尚不能认定模型在所有实验设计下均结构不可辨识。
+\begin{figure}[!htbp]\centering\incfig{fig04_landscape_identifiability}\caption{初始全模型的优化敏感性与参数剖面。（a）200 个随机起点的局部最小值及文献报告值（菱形）；上方数字为达到已找到最低目标值的起点比例。（b）沿 $F_A$ 的剖面目标函数，其他参数重新优化。剖面未在搜索范围内形成封闭最优区间。}\label{fig:landscape}\end{figure}
+
+样本内统计量同时受到优化结果、参数计数与可辨识性的影响。因此，本文以多起点重新估计的基线开展模型比较，同时报告计入选择性的 $\mathrm{BIC}_\mathrm{tot}$，并用留出观测预测评价机理扩展。
+
+\subsection{两步模型的组分浓度失配与伪持续性、批内失活}
+PPK-FIP 在六个案例中的全数据残差平方和均低于初始简化模型和初始全模型（表~\ref{tab:insample}，图~\ref{fig:insample}）。相对于 Nishimura 等各案例报告的最小目标值，PPK-FIP 的比值分别为 0.96、0.27、0.32、0.62、0.80 和 0.79。计入全部估计参数后，PPK-FIP 的 $\mathrm{BIC}_\mathrm{tot}$ 在六个案例中的 \InBICWins{} 个低于 ORIG，差值约为 14--123；Åkerman 70\,°C 的 $\mathrm{BIC}_\mathrm{tot}$ 增加约 6，表明小幅拟合改善不足以抵消参数惩罚。
+\inctab{insample}
+\begin{figure}[!htbp]\centering\incfig{fig08_insample}\caption{全数据拟合比较。（a）各模型 $F_\mathrm{obj}$ 与文献 \cite{nishimura2026} 报告最小值的比值。（b）相对于 ORIG 的 $\mathrm{BIC}_\mathrm{tot}$ 差值，负值表示更低的信息准则。}\label{fig:insample}\end{figure}
+
+Åkerman 两条温度曲线的拟合改善幅度明显不同。70\,°C 下 PPK-FIP 的 $F_\mathrm{obj}$ 为 \InAkSeventyFnew，与初始全模型接近，伪持续性与失活参数未显示强约束。100\,°C 下的 $F_\mathrm{obj}$ 从文献报告的 117.9 降至 \InAkHundredFnew，差异主要出现在后期反应减慢阶段。失活常数的模型加权值为 $k_d=\AkHundredKd$\,h$^{-1}$，占优简化形式的估计约为 0.032\,h$^{-1}$（表~\ref{tab:params}）。一阶失活有助于描述高温曲线，但浓度轨迹不能替代独立酶活测量。
+
+Bornadel 数据的改善集中在早期单酯与二酯分布。初始模型在前两小时高估 M 约 2--5 摩尔\,\%，低估 D 约 4--5 摩尔\,\%，随后残差符号发生改变（图~\ref{fig:resid}b）。加入伪持续性后，早期残差缩小至约 $\pm2$ 摩尔\,\%，$F_\mathrm{obj}$ 从 329.9 降至 \InBornFnew。估计的 $p_M=\BornPM$，线性化 95\,\% 置信半宽约为 0.025，$p_D=\BornPD$。反应度域的比较也显示，伪持续性路径改善了 M 与 D 的相对分布（图~\ref{fig:paths}）。$S_M$、$S_D$ 分别由初始指纹估计的 0.909、0.066 调整至 \BornSM、\BornSD，与持续性指纹分析的解释方向一致 \cite{mitchell2023}。由于公共速率因子在反应度域中消去，仅调整动态集总常数不能修正给定选择性下的组成路径。
+
+Tao 数据的拟合改善涉及完整集总常数形式和较小的二酯伪持续性参数。$a_w=0.25$ 时，$F_\mathrm{obj}$ 从文献报告的 121.2 降至 \InTaoAFnew，简化形式的权重仅为 0.02，$p_D=\TaoAPD$。$a_w=0.35/0.45$ 时，目标值从 325.8 降至 \InTaoBFnew。表~\ref{tab:params} 中三个水活度的 $p_D$ 均约为 0.05--0.06，组成路径变化小于 Bornadel 数据中的变化。
+
+Mao 三个批次使用批次独立的 $k_E$，PPK-FIP 的 $F_\mathrm{obj}$ 从文献报告的 1475.9 降至 \InMaoFnew。较大的拟合残差仍集中在第一批次后期的 T 与 D（图~\ref{fig:fits}）。70\,h 后的 T 观测约为 90\,\%，D 约为 5--10\,\%，与当前不可逆模型的后期轨迹存在偏差。公开曲线不足以区分测量或数字化误差、终点未达完全转化以及未建模反应因素，因而不能将平台直接判定为数据误差。图~\ref{fig:resid}a 显示，PPK-FIP 在六个案例中的绝对残差中位数均低于 ORIG，但 Mao 的较大残差未被完全消除。
+\inctab{params}
+\begin{figure}[!htbp]\centering\incfig{fig06_fits_time}\caption{九条反应曲线的全数据拟合。标记表示观测，虚线表示重新估计的初始两步法，实线表示 PPK-FIP。}\label{fig:fits}\end{figure}
+\begin{figure}[!htbp]\centering\incfig{fig07_paths_c}\caption{反应度域中的组分浓度路径。虚线表示初始指纹路径，实线表示含伪持续性的 PPK-FIP 路径。面板标题给出伪持续性估计，颜色与图~\ref{fig:fits} 一致。}\label{fig:paths}\end{figure}
+\begin{figure}[!htbp]\centering\incfig{fig09_residuals}\caption{组分浓度残差比较。（a）六个案例的全数据绝对残差。（b）Bornadel 数据中 M 与 D 的残差。圆点和虚线对应初始模型，方块和实线对应 PPK-FIP。}\label{fig:resid}\end{figure}
+
+组分残差与参数估计支持两种有条件的机理解释。Bornadel 数据的 M--D 分布偏差与伪持续性相符，Åkerman 100\,°C 的后期速率偏差可由批内失活缓解。全数据拟合尚不能判断新增参数是否改善未参与估计的观测预测。
+
+\subsection{PPK-FIP 的留出时间点预测改善与外推边界}
+留一时间点交叉验证中，各方法在全部 \NLotoFolds{} 折内重新估计参数（表~\ref{tab:loto}，图~\ref{fig:loto}）。在 \NFitPoints{} 个留出组分观测上，PPK-FIP 的合并 RMSE 从 ORIG 的 \LotoAllOrig{} 降至 \LotoAllNew{} 摩尔\,\%，相对降幅为 \LotoAllRedOrig\,\%（$p$\,\LotoAllPOrig）；相对于 ORIG-full 的 \LotoAllFull，降幅为 \LotoAllRedFull\,\%（$p$\,\LotoAllPFull）。PPK-FIP 的 RMSE 在 \LotoWinsOrig{} 个案例中低于 ORIG，其中 \LotoSigWinsOrig{} 个达到 Holm 校正后的显著性阈值。Bornadel、Tao 与 Mao 的改善较为明显；Åkerman 70\,°C 的 PPK-FIP RMSE 为 \LotoAkSeventyNew，高于 ORIG 的 \LotoAkSeventyOrig{} 和 ORIG-full 的 \LotoAkSeventyFull。
+
+无指纹先验的联合拟合在密集采样案例中与 PPK-FIP 接近，但在两条 Åkerman 曲线中的误差更高，分别为 2.34 对 1.89 和 3.88 对 3.51。以采样时间折为单位的比较中，PPK-FIP 在 \FoldN{} 折中的 \FoldWinsOrig{} 折优于 ORIG（$p=\FoldPOrig$），在 \FoldWinsFull{} 折优于 ORIG-full（$p=\FoldPFull$）。折级结果与合并误差的改善方向一致，但不同案例与不同采样密度之间仍存在差异。
+\inctab{loto_main}
+\begin{figure}[!htbp]\centering\incfig{fig10_loto}\caption{留一时间点交叉验证。（a）各案例 RMSE。（b）PPK-FIP 与比较基线的 RMSE 比值。星号表示 Holm 校正后的 Wilcoxon 检验，*、**、*** 分别对应 $p<0.05$、$p<0.01$、$p<0.001$。颜色按配对误差中位差方向标注。}\label{fig:loto}\end{figure}
+
+前半段训练的向前外推没有呈现同等幅度的合并改善（表~\ref{tab:fcst}，图~\ref{fig:fcstbars}）。PPK-FIP 在 Åkerman 100\,°C 下将 RMSE 从 \FcstAkHundredOrig{} 降至 \FcstAkHundredNew，Tao $a_w=0.25$ 下从 \FcstTaoAOrig{} 降至 \FcstTaoANew；Åkerman 70\,°C 与 Mao 的误差则高于 ORIG。合并 RMSE 为 \FcstAllNew{} 对 \FcstAllOrig{}（$p=\FcstAllPOrig$）。因此，留一时间点预测改善不能直接推广为所有训练窗口下的外推优势。
+
+图~\ref{fig:fcst} 给出三条代表性曲线。Åkerman 100\,°C 的早期数据已包含部分减速信息，PPK-FIP 改善了后期 T 的预测；Tao $a_w=0.25$ 的早期数据不足以约束后期减速，两种机理模型均提前预测接近完全转化。Bornadel 数据中的神经 ODE 在 15\,h 后预测 M 再次上升，与观测及机理模型轨迹不同。缺少显式反应结构约束的神经 ODE 在观测窗口外产生了较大轨迹偏差。
+\inctab{fcst_main}
+\begin{figure}[!htbp]\centering\incfig{fig11_forecast_bars}\caption{使用 $t\le0.5\,t_\mathrm{max}$ 观测训练后的向前外推误差。图形布局与图~\ref{fig:loto} 一致。}\label{fig:fcstbars}\end{figure}
+\begin{figure}[!htbp]\centering\incfig{fig12_forecast}\caption{三条反应曲线的向前外推。阴影表示训练窗口，虚线、实线和点线分别连接初始两步法、PPK-FIP 与神经 ODE 在留出时刻的预测。}\label{fig:fcst}\end{figure}
+
+\subsection{伪持续性与指纹先验的预测贡献}
+组件消融显示，伪持续性是合并留出预测改善的主要来源（表~\ref{tab:ablation}，图~\ref{fig:ablation}）。去除伪持续性后，合并 RMSE 增至 \AblNoProc{}（$p$\,\AblNoProcP），Bornadel 的误差由 \LotoBornNew{} 增至 \AblNoProcBorn，比值为 1.63。去除批内失活后，合并 LOTO RMSE 为 \AblNoKd，与完整 PPK-FIP 接近；合并外推 RMSE 为 11.41，略低于完整模型的 11.87。失活项对 Åkerman 100\,°C 的全数据拟合有帮助，但并未带来所有案例的合并预测增益。
+
+指纹先验的作用随采样密度变化。去除指纹先验的联合估计获得合并 RMSE \AblJoint，预测损失主要出现在稀疏的 Åkerman 曲线。较紧的选择性先验 $\lambda=1$ 获得 \AblLamOne{}（$p<0.001$），主要增加 Bornadel 案例误差，说明过强约束限制了表观选择性的修正。留一案例元验证在六个案例中均选择 $\lambda=3$。在 $\lambda=3$ 下，固定 $s_p=0.05$ 或 $0.2$ 的合并 RMSE 与元选择结果一致到小数点后三位。
+
+模型平均的贡献小于组成路径和先验的贡献。仅使用完整集总常数形式的合并 RMSE 为 \AblFullOnly，与模型平均接近；仅使用简化形式时为 \AblSimplOnly，Tao $a_w=0.25$ 的误差比值为 1.32。当前数据支持保留完整集总常数形式，但不足以说明 BIC 模型平均在其他数据条件下必然无效。
+\inctab{ablation}
+\begin{figure}[!htbp]\centering\incfig{fig14_ablation}\caption{PPK-FIP 的组件消融。（a）各变体合并 LOTO RMSE，虚线表示完整 PPK-FIP。（b）各案例相对于完整 PPK-FIP 的 RMSE 比值，红色表示误差增加，蓝色表示误差降低。}\label{fig:ablation}\end{figure}
+
+跨条件参数池化未降低合并预测误差（表~\ref{tab:pooling}，图~\ref{fig:pooling}）。完全池化改善 Åkerman 100\,°C 和两个 Tao 案例，但使 Åkerman 70\,°C 的 RMSE 从 1.89 增至 2.43。留一案例元验证选择池化层级后，合并 RMSE 为 \PoolAllSel，不池化时为 \PoolAllLo。跨条件共享参数的收益取决于条件变化是否保留可共享的动力学结构，因此后续分析采用逐案例估计。
+\inctab{pooling}
+\begin{figure}[!htbp]\centering\incfig[0.85\linewidth]{fig17_pooling}\caption{同一反应体系不同条件之间的参数池化结果，以 LOTO RMSE 表示。}\label{fig:pooling}\end{figure}
+
+\subsection{伪持续性路径的跨条件适用性与选择性偏差}
+跨条件迁移用于检验组成路径是否具有超出单条拟合曲线的适用性。伪持续性路径在 Tao 三个水活度下的迁移误差均低于无伪持续性路径，降幅为 11--31\,\%（表~\ref{tab:transfer}，图~\ref{fig:transfer}）。Åkerman 70\,°C 与 Mao 批次的两种路径误差接近，Åkerman 100\,°C 的伪持续性路径误差较高；总体 RMSE 比值为 \TransferRatio。使用 $a_w=0.25$ 和 $0.35$ 曲线预测 $a_w=0.45$ 时，伪持续性路径减少了低反应度区域的 M 高估和 D 低估。迁移结果支持 Tao 数据中组成路径修正的跨水活度适用性，但不能单独证明酶活性位点上的微观反应过程。
+\inctab{transfer}
+\begin{figure}[!htbp]\centering\incfig{fig16_transfer}\caption{组成路径的跨条件迁移。（a）留出条件的组分预测误差。（b）由 $a_w=0.25$ 和 $0.35$ 预测 $a_w=0.45$ 的组成路径；虚线为无伪持续性路径，实线为伪持续性路径。}\label{fig:transfer}\end{figure}
+
+蒙特卡洛实验量化了已知机理下的参数偏差（表~\ref{tab:sim}，图~\ref{fig:sim}）。无伪持续性真值 S1 下，PPK-FIP 与 ORIG 的曲线 RMSE 分别为 \SimSiNew{} 和 \SimSiOrig{} 摩尔\,\%，差异小于重复实验的标准差。PPK-FIP 的 $S_M$ 平均对数偏差为 $+0.025$，无正则化联合拟合的参数离散程度更大。模拟结果表明，增加机理参数在当前先验设置下未明显损害 S1 的曲线恢复精度；曲线误差接近并不等于每次拟合均将伪持续性参数置零。
+
+伪持续性真值 S2 下，ORIG 的 $S_M$ 平均对数偏差为 \SimSMBiasOrig，对应约 \SimSMBiasOrigPct\,\% 的高估，曲线 RMSE 为 \SimSiiOrig。紧先验保留了约 $+0.22$ 的对数偏差，PPK-FIP 将偏差降至 \SimSMBiasNew、曲线误差降至 \SimSiiNew。失活真值 S3 下，PPK-FIP 的曲线误差为 \SimSiiiNew，低于 ORIG 的 \SimSiiiOrig{} 与 ORIG-full 的 \SimSiiiFull；PPK-FIP 的 $S_D$ 对数偏差仍为 $-0.129$，不能表述为完全无偏。模拟支持显式机理与适度正则化降低估计偏差，结论限于已测试的真值、噪声和采样设计。
+\inctab{sim}
+\begin{figure}[!htbp]\centering\incfig{fig15_simulation}\caption{三种已知真值下的蒙特卡洛估计结果。上排为相对无噪声轨迹的曲线 RMSE，下排为 $S_M$ 的对数偏差。每种情景包含 \NSimReps{} 次重复，PPK-FIP 使用 $\lambda=3$、$s_p=0.2$，紧先验 $\lambda=1$ 作为对照。}\label{fig:sim}\end{figure}
+
+\subsection{机理约束与高斯过程残差校正的预测作用}
+数据驱动基线的内插表现随采样密度变化（表~\ref{tab:lotobb}，图~\ref{fig:blackbox}a）。在稀疏的 Åkerman 曲线上，高斯过程、MLP 集成和 TabICL 的 RMSE 约为 13--21 摩尔\,\%，神经 ODE 约为 3--4，机理模型约为 1.9--3.5。Bornadel、Tao 和 Mao 的密集曲线更适合数据驱动内插。神经 ODE 的合并 LOTO RMSE 为 \LotoBBNODE，低于 PPK-FIP 的 \LotoAllNew，但合并值受各案例观测数影响，不能替代逐案例比较。
+
+在前半段训练的外推中，四种数据驱动基线的逐案例误差均高于 PPK-FIP（表~\ref{tab:fcstbb}，图~\ref{fig:blackbox}b）。高斯过程、MLP、TabICL 和神经 ODE 的合并 RMSE 分别为 \FcstBBGP、\FcstBBMLP、\FcstBBTabICL{} 和 \FcstBBNODE，PPK-FIP 为 \FcstAllNew。本文基线未显式编码 TMP 守恒、逐级酯化顺序与 Ping Pong 速率结构，外推结果支持在当前小样本条件下保留机理约束，不能推广为所有机器学习动力学方法均缺乏外推能力。
+\inctab{loto_blackbox}\inctab{fcst_blackbox}
+\begin{figure}[!htbp]\centering\incfig{fig13_blackbox}\caption{机理模型与高斯过程、MLP 集成、TabICL 和神经 ODE 的预测比较，纵轴为对数尺度。（a）留一时间点交叉验证。（b）前半段训练的向前外推。}\label{fig:blackbox}\end{figure}
+
+PPK-FIP-GP 获得了所比较方法中最低的合并 LOTO RMSE（表~\ref{tab:hybrid}，图~\ref{fig:hybrid}）。合并值为 \HybLotoAll{} 摩尔\,\%，较 ORIG 降低 \HybLotoRedOrig\,\%（$p$\,\HybLotoPOrig），在 \FoldN{} 折中的 \FoldHybWinsOrig{} 折具有较低误差。改善主要出现在密集曲线，例如 Bornadel 从 1.05 降至 0.73，Mao 从 3.10 降至 \HybLotoMao。ORIG+GP 的合并误差也降至 \HybLotoOrigGP，与 PPK-FIP-GP 的差异对应 $p=\HybLotoPOrigGP$。残差校正可改善不同机理均值的内插，因而较低内插误差本身不能唯一确认机理结构。
+
+PPK-FIP-GP 的合并外推误差为 \HybFcstAll，与 PPK-FIP 的 \HybFcstBase{} 接近。远离训练窗口时，零均值高斯过程校正衰减，预测主要由机理均值决定。高斯过程项可吸收训练范围内未被机理模型解释的系统偏差，但偏差可能同时包含测量误差与机理缺项。本文结果支持按预测目的区分参数解释、窗口内内插与窗口外外推。
+\inctab{hybrid}
+\begin{figure}[!htbp]\centering\incfig{fig18_hybrid}\caption{机理模型、高斯过程残差校正模型与独立高斯过程的预测表现。（a）留一时间点交叉验证。（b）向前外推。纵轴采用对数尺度。}\label{fig:hybrid}\end{figure}

@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{跨条件参数池化的 LOTO RMSE（摩尔\%）。L1 共享组成路径，L1h 进一步对集总常数施加层次收缩（$\tau=\ln3$），L2 完全共享集总常数。留一案例元验证选择池化层级，最后一行比较元选择与独立估计 L0 的合并误差。}\label{tab:pooling}
+\footnotesize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrrl}
+\toprule
+案例 & ORIG & ORIG-full & L0 (PPK-FIP) & L1 路径 & L1h 层级 & L2 路径+$F$ & 元选择 \\
+\midrule
+Åkerman 70\,°C & 1.828 & 1.655 & 1.886 & 2.182 & 2.187 & 2.430 & L2 \\
+Åkerman 100\,°C & 3.742 & 3.293 & 3.505 & 3.325 & 3.002 & 2.203 & L0 \\
+Bornadel & 1.825 & 1.825 & 1.054 & -- & -- & -- & L0 \\
+Tao $a_w$=0.25 & 2.101 & 1.440 & 1.358 & 1.414 & 1.433 & 1.262 & L2 \\
+Tao $a_w$=0.35+0.45 & 1.643 & 1.591 & 1.495 & 1.332 & 1.350 & 1.301 & L2 \\
+Mao 批次 1--3 & 3.607 & 3.314 & 3.098 & -- & -- & -- & L0 \\
+\midrule
+全部案例（合并） & 2.533 & 2.312 & 2.121 &  &  &  & 2.117 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

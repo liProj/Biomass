@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\caption{全数据拟合的残差平方和与信息准则。报告列来自 Nishimura 等 \cite{nishimura2026}，依次为 $F_\mathrm{obj}$ 与不计指纹选择性的 BIC。重新估计列与 PPK-FIP 列依次为 $F_\mathrm{obj}$ 与计入全部参数的 BIC$_\mathrm{tot}$；PPK-FIP 使用模型加权平均参数数目 $\bar k$。}\label{tab:insample}
+\footnotesize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrr}
+\toprule
+案例 & 报告简化 $F_\mathrm{obj}$/BIC & 报告全模型 & ORIG 重拟合 $F_\mathrm{obj}$/BIC$_\mathrm{tot}$ & ORIG-full 重拟合 & PPK-FIP & $\bar k$ \\
+\midrule
+Åkerman 70\,°C & 70.9 / 35.1 & 59.0 / 35.7 & 70.9 / 42.3 & 58.4 / 42.5 & \textbf{56.8} / \textbf{48.8} & 9.0 \\
+Åkerman 100\,°C & 118.0 / 50.3 & 117.9 / 56.9 & 118.0 / 56.9 & 48.9 / 38.9 & \textbf{31.8} / \textbf{33.2} & 8.9 \\
+Bornadel & 329.9 / 140.5 & 329.9 / 145.3 & 329.9 / 150.1 & 329.9 / 154.9 & \textbf{105.0} / \textbf{27.5} & 9.1 \\
+Tao $a_w$=0.25 & 123.5 / 54.5 & 121.2 / 61.7 & 202.1 / 94.4 & 110.8 / 64.2 & \textbf{75.1} / \textbf{51.7} & 10.0 \\
+Tao $a_w$=0.35+0.45 & 326.7 / 132.9 & 325.8 / 142.4 & 337.9 / 147.7 & 319.6 / 149.6 & \textbf{260.2} / \textbf{133.8} & 9.8 \\
+Mao 批次 1--3 & 1771.5 / 381.6 & 1475.9 / 365.7 & 1624.4 / 379.3 & 1373.2 / 365.5 & \textbf{1169.6} / \textbf{357.7} & 12.0 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

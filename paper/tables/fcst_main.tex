@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{Forward extrapolation (train $t\le0.5t_\mathrm{max}$): RMSE (molar \%) of every procedure re-estimated from scratch in each fold. ratio = RMSE(PPK-FIP)/RMSE(reference); $p$ = Wilcoxon signed-rank test on paired squared errors, Holm-corrected over the six cases (O: vs. original simplified, F: vs. original full model; pooled row uncorrected).}\label{tab:fcst}
+\footnotesize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+Case & ORIG & ORIG-full & ORIG-BIC & JOINT-BMA & PPK-FIP & ratio$_\mathrm{O}$ & $p_\mathrm{O}$ & ratio$_\mathrm{F}$ & $p_\mathrm{F}$ \\
+\midrule
+Åkerman 70\,°C & \textbf{1.097} & 9.527 & \textbf{1.097} & 1.733 & 1.443 & 1.315 & 1.000 & 0.152 & 0.003 \\
+Åkerman 100\,°C & 10.670 & \textbf{0.673} & 10.670 & 5.773 & 5.506 & 0.516 & 1.000 & 8.180 & 0.594 \\
+Bornadel & 4.044 & 4.044 & 4.044 & 4.415 & \textbf{3.971} & 0.982 & 1.000 & 0.982 & 1.000 \\
+Tao $a_w$=0.25 & 19.861 & 19.861 & 19.861 & \textbf{17.167} & 17.525 & 0.882 & 1.000 & 0.882 & 1.000 \\
+Tao $a_w$=0.35+0.45 & 15.866 & 15.866 & 15.866 & 15.897 & \textbf{15.753} & 0.993 & 1.000 & 0.993 & 0.897 \\
+Mao batches 1--3 & 4.654 & \textbf{4.159} & 4.654 & 5.660 & 7.765 & 1.669 & 1.000 & 1.867 & 0.013 \\
+\midrule
+All cases (pooled) & 12.080 & 12.060 & 12.080 & \textbf{11.582} & 11.874 & 0.983 & 0.184 & 0.985 & 0.740 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

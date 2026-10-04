@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{机理模型与数据驱动基线的留一时间点交叉验证 RMSE（摩尔\%）。}\label{tab:lotobb}
+\footnotesize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrr}
+\toprule
+案例 & ORIG & PPK-FIP & GP & MLP 集成 & TabICL & 神经 ODE \\
+\midrule
+Åkerman 70\,°C & 1.828 & 1.886 & 13.284 & 20.271 & 12.711 & 3.057 \\
+Åkerman 100\,°C & 3.742 & 3.505 & 15.073 & 17.701 & 20.607 & 4.064 \\
+Bornadel & 1.825 & 1.054 & 0.679 & 12.653 & 1.289 & 1.081 \\
+Tao $a_w$=0.25 & 2.101 & 1.358 & 7.925 & 12.491 & 3.128 & 1.436 \\
+Tao $a_w$=0.35+0.45 & 1.643 & 1.495 & 0.741 & 10.694 & 1.567 & 1.464 \\
+Mao 批次 1--3 & 3.607 & 3.098 & 1.350 & 12.108 & 2.848 & 1.527 \\
+\midrule
+全部案例（合并） & 2.533 & 2.121 & 5.668 & 12.988 & 6.130 & 1.791 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

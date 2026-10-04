@@ -1,0 +1,85 @@
+Built-in image_gen; academic workflow redesign.
+
+INITIAL GENERATION PROMPT
+Use case: scientific-educational / academic methods schematic.
+Redesign the attached figure into one polished journal manuscript figure. The attached image is the content reference and redesign target, not a visual style to copy. Preserve the scientific comparison and direction of information flow, but completely improve its typography, hierarchy, density and composition.
+
+Output: one high-resolution landscape image, roughly 1.45:1 aspect ratio, pure white background, crisp vector-like linework and typesetting, intended for a two-column biochemical engineering paper. English labels only. Do NOT reproduce the Chinese caption, reference number, page margins or screenshot appearance. No overarching decorative title.
+
+Visual style: restrained scientific editorial design, professional Helvetica/Arial-style type; mathematically correct italic variables with subscripts. Thin charcoal rules and arrows, consistent line weights, generous yet purposeful whitespace. Muted ochre accent for the initial method and dark desaturated navy/teal accent for PPK-FIP. Mostly white, with at most very pale tinted sectional highlights. Avoid colorful stacked pill boxes, thick outlines, rounded UI cards, gradients, shadows, 3D, clip art, decorative scientific equipment, ornamental icons, stock protein renderings, and fake data curves. Prefer open aligned modules, fine separators, succinct headings and small meaningful mathematical diagrams.
+
+Layout:
+A narrow common input strip across the top, reading "Reaction profiles" with "Z, M, D, T" and the correct equation "c = M + 2D + 3T". A simple delicate chain Z → M → D → T represents sequential esterification, not measured data.
+Below, two balanced columns separated by ample whitespace and a fine pale vertical divider.
+Left header "(a) Initial two-step method".
+Right header "(b) PPK-FIP".
+Use three vertically aligned levels with small numbered stage markers 1, 2, 3 and downward arrows. Each level should feel like a compact journal diagram module, not a presentation bullet slide.
+
+Left stage 1:
+Heading "Fingerprint estimation"
+A small elegant reaction-degree symbol c beside text "Irreversible composition path"
+Equation-like line "Ŝ_M, Ŝ_D"
+Short caption "Fixed in the dynamic fit"
+Left stage 2:
+Heading "Dynamic parameter fitting"
+Line "Time-domain ODE model"
+Math line "k_E, F_A, F_AZ, F_AM, F_AD"
+Short caption "Local optimization"
+Left stage 3:
+Heading "Model selection"
+Line "Simplified model by BIC"
+Short caption "In-sample fit and confidence intervals"
+
+Right stage 1:
+Heading "Extended reaction path"
+Line "Ping Pong kinetics + pseudo-processivity"
+Math line "S_M, S_D, p_M, p_D"
+A minimal secondary motif can show newly formed intermediates continuing to react before release, but do not add unlabeled chemical structures or an incorrect additional chemical species. Text alone is preferable to an ambiguous mechanism.
+Right stage 2:
+Heading "Exact time mapping"
+Accurately typeset the complete equation across two neatly balanced lines if needed:
+"k_E τ(c) = J_0 + F_A J_1 + F_AZ J_Z + F_AM J_M + F_AD J_D"
+"τ = (1 − e^(−k_d t)) / k_d"
+Short caption "Explicit within-batch deactivation"
+Right stage 3:
+Heading "Joint MAP estimation"
+Line "Fingerprint-informed prior on S_M, S_D"
+Line "Shrinkage priors on p_M, p_D, k_d"
+Line "Multistart search · BIC model averaging"
+Small caption "Hyperparameters by leave-one-case-out validation"
+
+Draw exactly one clear dashed curved connector from the fingerprint estimates in left stage 1 to the prior line in right stage 3. Route the connector cleanly down the whitespace between columns, without crossing any text, arrows, or equations. Label this connector "Prior information" in small navy text. Solid arrows remain vertical within each column.
+
+Bottom: Both columns connect to a shared evaluation area separated by a fine horizontal rule, with heading "Shared validation". This must be visually integrated, not one huge grey text box. Three equal small typographic groups:
+"Predictive performance"
+"Leave-one-time-point-out CV"
+"Forward extrapolation"
+
+"Mechanistic assessment"
+"Cross-condition transfer"
+"Monte Carlo parameter recovery"
+
+"Model comparison"
+"In-sample fit"
+"GP · MLP · TabICL · neural ODE"
+
+All text must be legible at publication size. Equations and abbreviations must remain correct. Do not invent numerical results or comparative superiority. The figure should communicate the transition from fixed fingerprint estimates to a prior-informed joint model at a glance. Render a finished academic figure, with clear hierarchy, accurate scientific labeling and carefully balanced spacing.
+
+FINAL REFINEMENT PROMPT
+Edit the attached scientific workflow figure. This is a targeted visual refinement for an academic journal manuscript, NOT a slide or promotional infographic.
+
+Preserve ALL scientific content, exact English labels, equations, column order, information flow, three corresponding stages, the dashed prior-information connector, and the three shared-validation groups. Preserve every mathematical subscript including F_AZ J_Z, F_AM J_M, F_AD J_D, and tau=(1-exp(-k_d t))/k_d. Do not simplify or change any scientific statement.
+
+Change only the visual styling and typography to a genuinely flat, restrained publication figure:
+1. Pure white background everywhere. Remove ALL gradients, colored panel fills, shaded strips, drop shadows, texture and 3D effects.
+2. Remove the SIX oversized circular numbered badges completely. Replace each with a tiny plain-text stage numeral 1, 2 or 3 next to its stage heading, no shape behind it.
+3. Remove the three decorative icons at the bottom (bar chart, gear, weighing scale) entirely. The bottom groups contain text only.
+4. Remove the rounded rectangular outer borders from all six stage modules. Instead use thin light-grey horizontal hairline rules separating vertically successive stages. Use whitespace and alignment to establish the hierarchy. Keep one thin neutral vertical divider between the two main columns.
+5. Remove the rectangle enclosing the top Reaction profiles strip and the rectangle enclosing the bottom validation strip. Use at most a thin horizontal rule above/below those areas.
+6. Use compact neutral Helvetica-like typography. Main column titles approximately 25% smaller than in the reference and dark charcoal, with only the letters (a) and (b) or their short underline accents muted ochre and desaturated navy. Stage headings moderate semibold, approximately 15% smaller, primarily charcoal. Avoid heavy bold everywhere.
+7. Keep math expressions in crisp black italic serif mathematical typesetting. Body labels and equations must remain clearly legible. Secondary explanatory captions use medium grey.
+8. Keep downward arrowheads small, charcoal, with thin line weights. Keep the single dashed prior-information connector muted navy, cleanly routed through whitespace with label. No crossing of content.
+9. Left-column content should be consistently aligned, not scattered. Bring the small standalone c and fingerprint estimates into a balanced, compact first stage. Maintain the exact meaning "Fixed in the dynamic fit".
+10. Crop unnecessary outer margins and balance the top strip, body and footer. Preserve a landscape aspect ratio of about 1.45:1. Produce a high-resolution clean standalone image with vector-like edges, no caption, no watermark, no journal logo.
+
+The final image must look like a carefully typeset biochemical modelling methods figure: open white modules, thin rules, precise equations, restrained two-accent palette, and clear correspondence between the methods. It must NOT retain card boxes, glossy badges or decorative icons.

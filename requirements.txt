@@ -1,0 +1,8 @@
+# Direct dependencies inferred from imports; original environment was not locked.
+numpy
+pandas
+scipy
+matplotlib
+numba
+PyMuPDF
+python-docx

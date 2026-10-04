@@ -1,0 +1,78 @@
+\section{材料与方法}\label{sec:methods}
+\subsection{初始两步法与 PPK-FIP 的估计流程}
+图~\ref{fig:workflow} 比较了 Nishimura 等的初始两步法 \cite{nishimura2026} 与 PPK-FIP。初始两步法先用不可逆指纹模型估计 $S_M$、$S_D$，再固定选择性，用局部搜索估计动态参数，并根据样本内残差平方和 $F_\mathrm{obj}$ 和 BIC 选择集总常数形式。PPK-FIP 在组成路径中加入伪持续性，在时间映射中加入批内失活，并通过多起点最大后验（MAP）估计联合优化参数。指纹估计作为选择性先验的中心，先验宽度允许时间域数据修正选择性；收缩先验限制伪持续性与失活参数的幅度。简化和完整集总常数形式的预测按 BIC 权重平均，超参数通过留一案例元验证选择。初始两步法与 PPK-FIP 使用相同的训练与验证划分。
+\begin{figure}[!htbp]\centering\incfig{fig01_workflow}\caption{初始两步法 \cite{nishimura2026}（a）与 PPK-FIP（b）的估计流程。指纹估计在初始两步法中固定，在 PPK-FIP 中用作先验中心。底部给出共同的评价流程。}\label{fig:workflow}\end{figure}
+
+\subsection{反应数据与一致性核对}
+反应曲线由程序从 Nishimura 等 \cite{nishimura2026} 的补充表 S1--S6 和 S17--S21 提取。Åkerman 数据包括 70 和 100\,°C 下的油酸--TMP 酯化，催化剂为 Novozym 435，初始酸与 TMP 摩尔比为 3:1 \cite{akerman2011}。Bornadel 数据采用相同底物体系 \cite{bornadel2013}。Tao 数据采用辛酸和 \emph{Candida} sp.\ 99--125 脂肪酶，初始摩尔比为 3.2:1，水活度分别为 0.25、0.35 和 0.45 \cite{tao2015}。Mao 数据采用壬酸与相同来源的脂肪酶，动态拟合使用前三个重复使用批次 \cite{mao2024}。组分浓度以相对于初始 TMP 的摩尔百分数表示，反应度定义为 $c=M+2D+3T$。公开数据共包含 11 条曲线、\NRows{} 行；与 Nishimura 等相同的 \NFitProfiles{} 条拟合曲线包含 \NFitPoints{} 个组分观测（表~\ref{tab:data}）。
+\inctab{data}
+
+图~\ref{fig:data} 给出九条拟合曲线在时间域和反应度域中的分布。Åkerman 曲线仅含 7--9 个非零采样时间，Bornadel 曲线含 30 个，采样密度差异影响参数约束强度。Tao 的三个水活度及 Mao 的三个批次在时间域中具有不同反应速率，但在反应度域中呈现接近的组成路径，因而适合检验路径的跨条件迁移。Mao 数据未报告 Z，且第一批次的三酯观测在约 90\,\% 处形成平台。有限时间平台与完全转化的渐近状态需要区分，平台偏差的来源不能仅由公开曲线确定。
+\begin{figure}[!htbp]\centering\incfig{fig02_data_overview}\caption{九条拟合曲线在时间域（每组左图）和反应度域（每组右图）中的分布。Z、M、D、T 分别表示 TMP、单酯、二酯和三酯。数据取自文献 \cite{nishimura2026} 的补充表 S1--S6、S17--S19，单位为相对初始 TMP 的摩尔百分数。}\label{fig:data}\end{figure}
+
+Nishimura 等未直接列出各拟合的观测数，本文通过依赖样本量的统计量核对数据范围。12 个动态拟合的 BIC 用于检查观测数 $n_T$ 与参数计数，4 个指纹拟合的残差平方和用于检查公开数据与报告拟合的一致性。动态参数核对包括将文献参数代入方程求值，以及对相同模型进行 30 起点重新估计。200 个随机起点的局部解分布用于评估优化敏感性，沿 $F_A$ 的剖面目标函数通过重新优化其他参数得到，用于检查当前数据下的参数可辨识性 \cite{raue2009}。
+
+\subsection{初始两步模型及比较基线}
+在持续移除生成水的不可逆酯化假设下，Nishimura 等的指纹模型为 \cite{nishimura2026}
+\begin{equation}
+\begin{aligned}
+&\frac{dZ}{dc}=\frac{-Z}{S},\qquad \frac{dM}{dc}=\frac{Z-S_MM}{S},\qquad \frac{dD}{dc}=\frac{S_MM-S_DD}{S},\qquad\frac{dT}{dc}=\frac{S_DD}{S},\\
+&S=Z+S_MM+S_DD.
+\end{aligned}\label{eq:fp}
+\end{equation}
+动态模型使用公共 Ping Pong 速率因子
+\begin{equation}
+\begin{aligned}
+&r=\frac{k_A[E]_T\,A}{A(F_A+F_{AZ}Z+F_{AM}M+F_{AD}D)+Z+S_MM+S_DD},\\
+&\frac{dZ}{dt}=-rZ,\quad \frac{dM}{dt}=r(Z-S_MM),\quad \frac{dD}{dt}=r(S_MM-S_DD),\quad \frac{dT}{dt}=rS_DD.
+\end{aligned}\label{eq:dyn}
+\end{equation}
+其中 $A=A_0-c$ 表示脂肪酸。指纹步骤通过最小二乘估计 $S_M$、$S_D$；动态步骤固定选择性，估计 $k_E=k_A[E]_T$ 与集总常数。简化形式采用 Nishimura 等选择的非零常数组合，完整形式保留全部集总常数。由于 $k_A$ 与 $[E]_T$ 仅以乘积出现，本文直接估计 $k_E$，并用 $k_E/k_A$ 核对文献隐含的酶载量。
+
+目标函数为各组分浓度的残差平方和 $F_\mathrm{obj}=\sum(y_\mathrm{pred}-y_\mathrm{obs})^2$，Mao 数据的求和不包括 Z。BIC 定义为 $n_T\ln(F_\mathrm{obj}/n_T)+k\ln n_T$ \cite{schwarz1978}。为与文献比较，BIC 沿用 Nishimura 等仅计算动态步骤参数的约定；另报告计入两个指纹选择性的 $\mathrm{BIC}_\mathrm{tot}$。ORIG 与 ORIG-full 分别表示初始简化模型和初始全模型在本文中重新估计的基线。多起点搜索的最小目标值用于后续比较；有限起点搜索不构成全局最优的数学保证。
+
+\subsection{伪持续性与批内失活的机理扩展}
+伪持续性描述新生成的酯在扩散离开活性位点之前再次酰化的有效过程 \cite{mitchell2023}。设 $p_M$ 为新生成单酯在释放前继续酯化的概率，$p_D$ 为新生成二酯继续酯化的概率。以公共速率因子 $r$ 归一化的组成变化为
+\begin{align}
+\dot Z&=-Z, & \dot M&=Z(1-p_M)-S_MM,\nonumber\\
+\dot D&=Zp_M(1-p_D)+S_MM(1-p_D)-S_DD, & \dot T&=Zp_Mp_D+S_MMp_D+S_DD,\nonumber\\
+\Sigma&\equiv\dot c=Z(1+p_M+p_Mp_D)+S_MM(1+p_D)+S_DD.\label{eq:proc}
+\end{align}
+当 $p_M=p_D=0$ 时，反应度域方程退化为式~(\ref{eq:fp})。批内失活通过一阶活性衰减 $r\to r\,e^{-k_dt}$ 描述。参数 $k_d=0$ 对应无失活极限。因此，机理扩展允许通过约束 $p_M$、$p_D$ 和 $k_d$ 构造嵌套对照模型。
+
+\subsection{精确时间重参数化}
+共享速率因子使组分方程可写为反应度 $c$ 的函数，即将式~(\ref{eq:proc}) 除以 $\Sigma$。时间映射由求积关系给出
+\begin{equation}
+k_E\,\tau(c)=J_0(c)+F_AJ_1(c)+F_{AZ}J_Z(c)+F_{AM}J_M(c)+F_{AD}J_D(c),\qquad \tau=\frac{1-e^{-k_dt}}{k_d}.\label{eq:tau}
+\end{equation}
+其中 $J_0=\int_0^c S/((A_0-c')\Sigma)\,dc'$，$J_1=\int_0^c dc'/\Sigma$，$J_X=\int_0^c X/\Sigma\,dc'$（$X=Z,M,D$）；$k_d=0$ 时取极限 $\tau=t$。当 $p_M=p_D=0$ 时，$J_0=\ln[A_0/(A_0-c)]$。组成方程与积分由 Numba 编译的四阶 Runge--Kutta 方法求解，积分网格在接近完全转化时加密 \cite{lam2015}。给定组成路径后，任意时刻的预测由式~(\ref{eq:tau}) 的单调插值获得；更新 $k_E$、$F_\ast$ 或 $k_d$ 无需重新积分组成路径。
+
+图~\ref{fig:bench} 比较 Bornadel 采样设计下带失活的伪持续性模型的求值成本。LSODA 与高精度 Radau 的单次求值分别需要约 19\,ms 和 \SolverRadauMs\,ms；重参数化方法在重新计算组成路径时需要约 11\,ms，使用缓存路径时需要 \SolverCachedMs\,ms。相对于容差 $10^{-12}$ 的 Radau 参考解，最大组分误差为 $\SolverErr$ 摩尔\,\%。缓存路径降低了动态参数搜索成本，使 30 起点估计、\NLotoFolds{} 折交叉验证和每情景 \NSimReps{} 次模拟的计算规模可控。
+\begin{figure}[!htbp]\centering\incfig[0.75\linewidth]{fig05_solver_benchmark}\caption{Bornadel 采样设计下的模型求值时间与数值误差。重参数化方法分别统计重新计算组成路径与缓存组成路径的成本。误差相对于容差 $10^{-12}$ 的 Radau 参考解计算。}\label{fig:bench}\end{figure}
+
+\subsection{指纹信息先验与模型平均}
+固定指纹选择性可视为选择性先验宽度趋于零的极限，无正则化联合拟合则不施加指纹约束。PPK-FIP 采用有限宽度的指纹信息先验
+\begin{equation}
+\ln S_X\sim\mathcal N\!\left(\ln\hat S_X^{\,\mathrm{fp}},\ (\lambda\,\delta_X/1.96)^2\right),\quad p_M,p_D\sim\mathcal N^+(0,s_p^2),\quad \log_{10}k_d\sim\mathcal N(-3,1.5^2).\label{eq:prior}
+\end{equation}
+其中 $\delta_X$ 为训练数据上指纹估计的相对 95\,\% 置信半宽，$\lambda$ 控制选择性先验宽度，$s_p$ 控制伪持续性收缩强度。MAP 估计将先验残差 $\hat\sigma(u-\mu)/s$ 附加到数据残差向量，$\hat\sigma$ 为无惩罚拟合的残差标准差。优化使用信赖域反射算法，起点来自无惩罚联合模型及加入失活、伪持续性或两种机理的嵌套模型。
+
+简化和完整集总常数形式分别拟合，预测按 $w_i\propto e^{-\mathrm{BIC}_i/2}$ 加权平均 \cite{hoeting1999,burnham2002}。每个目标案例的超参数 $(\lambda,s_p)\in\{1,3\}\times\{0.05,0.2\}$ 由留一案例元验证选择，选择准则为排除目标案例后的五个案例上 PPK-FIP 与 ORIG 的交叉验证误差比均值。目标案例不参与超参数选择，但同一研究来源可能包含多个案例，留一案例不等同于留一独立研究。指纹先验由训练数据估计，属于数据自适应正则化；先验与似然并非来自相互独立的数据。
+
+\subsection{预测验证与组件分析}
+\textbf{样本内拟合。}各方法使用全部训练观测进行 30 起点估计，报告 $F_\mathrm{obj}$、BIC、$\mathrm{BIC}_\mathrm{tot}$ 与 AICc \cite{hurvich1989}，并比较残差及反应度域组成路径。
+
+\textbf{留一时间点交叉验证。}对 \NLotoFolds{} 个非零采样时间逐一留出相应时刻的全部组分观测，在训练数据上重新估计各方法的全部参数，再预测留出观测。初始两步法的指纹步骤与动态步骤均在每个验证折内重新估计。
+
+\textbf{向前外推。}各方法使用 $t\le0.5\,t_\mathrm{max}$ 的观测训练，预测后半段反应曲线。每个案例使用一次时间划分，用于比较给定训练窗口下的外推表现。
+
+\textbf{组件消融与多任务池化。}分别去除伪持续性、失活、指纹先验、模型平均或超参数元选择，每个变体均重新进行完整交叉验证。多任务扩展比较共享组成路径（L1）、进一步对集总常数施加层次收缩（L1h）及完全共享集总常数（L2），池化层级由留一案例元验证选择。
+
+\textbf{跨条件迁移。}使用同一反应体系的其他温度、水活度或批次曲线估计组成路径，并在反应度域预测留出条件的组分浓度。无伪持续性路径与伪持续性路径使用相同迁移划分。
+
+\textbf{蒙特卡洛参数恢复。}基于三个真实案例的采样设计与残差噪声生成合成数据。S1 使用初始无伪持续性模型，S2 包含伪持续性，S3 包含批内失活，每种情景重复 \NSimReps{} 次。曲线误差在稠密时间网格上相对于无噪声真值计算，选择性偏差在对数尺度上计算。
+
+\textbf{数据驱动基线与混合模型。}比较高斯过程（Matérn-5/2 核加白噪声）、五成员多层感知机（MLP）集成、预训练 TabICL 回归器和神经常微分方程（神经 ODE）\cite{rasmussen2006,qu2025tabicl,chen2018}。输入包括时间、条件描述量及已知初始状态。PPK-FIP-GP 在机理预测上叠加按组分估计的高斯过程训练残差模型，零均值偏差项在远离训练数据时衰减。ORIG+GP 使用相同残差校正结构作为对照。
+
+\subsection{统计分析与计算环境}
+预测误差差异采用配对平方误差的 Wilcoxon 符号秩检验，六个案例之间采用 Holm 校正 \cite{wilcoxon1945,holm1979}。同时报告以时间折为单位的比较，以减少同一时刻多组分观测的相关性对检验的影响。交叉验证折仍共享部分训练数据，显著性结果需结合效应量与案例差异解读。计算使用 Python、NumPy、SciPy、scikit-learn 和 PyTorch，既有实验在 NVIDIA DGX Spark（GB10）工作站完成 \cite{virtanen2020}。数值与表格由保存的结果文件生成。

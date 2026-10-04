@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{Forward extrapolation (train $t\le0.5t_\mathrm{max}$): mechanistic models versus black-box machine-learning baselines (RMSE, molar \%).}\label{tab:fcstbb}
+\footnotesize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrr}
+\toprule
+Case & ORIG & PPK-FIP & GP & MLP ens. & TabICL & Neural ODE \\
+\midrule
+Åkerman 70\,°C & 1.097 & 1.443 & 37.401 & 39.146 & 37.710 & 6.318 \\
+Åkerman 100\,°C & 10.670 & 5.506 & 22.011 & 35.167 & 21.189 & 19.093 \\
+Bornadel & 4.044 & 3.971 & 22.154 & 39.561 & 26.979 & 11.125 \\
+Tao $a_w$=0.25 & 19.861 & 17.525 & 46.836 & 43.520 & 29.005 & 33.133 \\
+Tao $a_w$=0.35+0.45 & 15.866 & 15.753 & 27.849 & 41.380 & 23.664 & 26.204 \\
+Mao batches 1--3 & 4.654 & 7.765 & 16.073 & 40.512 & 15.865 & 11.178 \\
+\midrule
+All cases (pooled) & 12.080 & 11.874 & 28.047 & 40.791 & 24.188 & 20.919 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
